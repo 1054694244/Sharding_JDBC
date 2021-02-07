@@ -1,5 +1,6 @@
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.shenzc.ShardingJdbcApplication;
+import com.shenzc.entity.ShardingTest;
 import com.shenzc.entity.ShardingUser;
 import com.shenzc.mapper.ShardingTestMapper;
 import com.shenzc.mapper.UserMapper;
@@ -32,13 +33,13 @@ public class chui_zhi_fen_ku_test {
     //    }
     //}
 
-    //@Test
-    //public void findCourse() {
-    //    QueryWrapper<ShardingTest> wrapper = new QueryWrapper<ShardingTest>();
-    //    wrapper.eq("user_id", 13);
-    //    wrapper.eq("cid", 563727912461664256L);
-    //    System.out.println(shardingTestMapper.selectOne(wrapper));;
-    //}
+    @Test
+    public void findCourse() {
+        QueryWrapper<ShardingTest> wrapper = new QueryWrapper<ShardingTest>();
+        wrapper.eq("user_id", 13);
+        wrapper.eq("cid", 563727912461664256L);
+        System.out.println(shardingTestMapper.selectOne(wrapper));;
+    }
 
     @Autowired
     private UserMapper userMapper;
@@ -51,10 +52,10 @@ public class chui_zhi_fen_ku_test {
     //    userMapper.insert(shardingUser);
     //}
 
-    @Test
+    /*@Test
     public void findUser() {
         QueryWrapper<ShardingUser> wrapper = new QueryWrapper<ShardingUser>();
         wrapper.eq("user_id", 563736839387611137L);
         userMapper.selectOne(wrapper);
-    }
+    }*/
 }
